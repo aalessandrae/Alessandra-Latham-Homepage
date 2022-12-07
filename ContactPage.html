@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="AboutPage.css"></link>
+    <link rel="stylesheet" type="text/css" href="AboutPage.css">
+<!--    <script defer src="ContactForm.js "/>-->
     <title>Contact </title>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script lang="js">
+    const Name = document.getElementById("name")
+    const Emailaddress = document.getElementById("email")
+    const Message = document.getElementById("message")
+
+    const SendEmail = () => {
+
+
+        Email.send({
+            Host : "smtp.mailtrap.io",
+            Username : "23b7fea21ee3f3",
+            Password : "53f4f55cfa3bf7",
+            To : "alessandra.latham2808@gmail.com",
+            From : Emailaddress.getAttribute("value"),
+            Subject : "Message from " + Name.getAttribute("value") + " (Your Website)",
+            Body : Message.getAttribute("value")
+        }).then(
+            message => alert(message)
+        );
+    }
+
+    </script>
 </head>
 <body>
 <div class="wholepage-container">
@@ -50,7 +73,7 @@
                     <b> Email: </b> alessandra.latham2808@gmail.com
                 </p>
 
-                <form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
+                <form>
                     <div class="row">
                         <label class="required" for="name">Your name:</label><br/>
                         <input id="name" class="input" name="name" type="text" value="" size="30"/><br/>
@@ -67,7 +90,7 @@
                         <span id="message_validation" class="error_message"></span>
                     </div>
 
-                    <button id="emailbutton" type="submit"> Send email </button>
+                    <button id="emailbutton" type="button" onclick="SendEmail()" > Send email </button>
                 </form>
 
                 <p class="socialmedia">
