@@ -1,5 +1,5 @@
 html {
-    height:100%;
+    height: 100%;
     width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -23,24 +23,32 @@ body {
     overflow-y: scroll;
 }
 
+.navbarimage {
+    width: 70%;
+}
+
 .navbar {
     height: 100%;
     align-items: center;
-    display:flex;
+    display: flex;
     row-gap: 4%;
     column-gap: 20px;
     flex-direction: column;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
-.navbar-container{
+.navbar-container {
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: lightblue;
+    padding: 120px 0px;
 }
 
 .wholepage-container {
     display: flex;
-    height:100vh;
+    height: 100vh;
 }
 
 a {
@@ -55,7 +63,7 @@ a:hover {
 
 /*This section regards the About Page only*/
 
-.about-page-container{
+.about-page-container {
     text-align: center;
     align-items: center;
     display: flex;
@@ -90,15 +98,16 @@ a:hover {
     display: flex;
     flex-direction: column;
 }
+
 .contacttext {
     font-family: "Calibri Light";
 }
 
 .socialmedia {
-     justify-content: center;
-     display:flex;
-     gap: 20px;
- }
+    justify-content: center;
+    display: flex;
+    gap: 20px;
+}
 
 .social-media-image {
     width: 40px;
@@ -129,4 +138,33 @@ a:hover {
     justify-content: space-between;
     flex-wrap: nowrap;
     font-weight: bold;
+}
+
+/* Gallery Page*/
+.landscapephoto {
+    width: 300px;
+}
+
+.portraitphoto {
+    height: 300px;
+}
+
+.gallery-image-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.gallery-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3 {
+    align-self: flex-start;
+    padding-left: 60px;
 }
